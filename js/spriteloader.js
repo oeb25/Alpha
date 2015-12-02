@@ -1,4 +1,4 @@
-function Bitmap(src, width, height) {
+export function Bitmap(src, width, height) {
     this.image = new Image();
     this.image.src = src;
     this.width = width;

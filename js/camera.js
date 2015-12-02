@@ -1,8 +1,9 @@
-function Camera(canvas) {
+import { Bitmap } from './spriteloader';
+
+export default function Camera(canvas) {
     this.ctx = canvas.getContext('2d');
     this.width = canvas.width;
     this.height = canvas.height;
-    this.map = map;
 };
 
 Camera.prototype.drawCharacter = function(character) {
@@ -17,7 +18,7 @@ Camera.prototype.drawMap = function(map) {
 
 Camera.prototype.drawBackground = function() {
     this.background = new Bitmap('./img/kok-forest/main-bg1.png');
-    this.block = new Bitmap('./block.png');
+    //this.block = new Bitmap('./block.png');
     this.ctx.drawImage(this.background.image, 0, 0);
 };
 

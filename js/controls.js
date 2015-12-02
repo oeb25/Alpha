@@ -1,4 +1,4 @@
-function Controls() {
+export default function Controls() {
     this.codes = {37: 'left', 38: 'up', 40: 'down', 39: 'right', 32: 'jump'};
     this.states = {'left': false, 'right': false, 'jump': false};
 

@@ -1,7 +1,9 @@
+import { Bitmap } from './spriteloader';
+
 var walkSpeed = 5;
 var jumpHight = 16;
 
-function Player(x, y, direction, frame) {
+export default function Player(x, y, direction, frame) {
     this.x = x;
     this.y = y;
     this.jump = false;
@@ -33,7 +35,7 @@ Player.prototype.update = function(controls, map) {
             this.current = ((this.frame % this.animations[this.dir][0]) * this.animations[this.dir][3]) +this.animations[this.dir][1];
         }
     };
-    
+
     if (controls.down) {
         this.dir = 2;
         this.y += walkSpeed;
@@ -77,7 +79,7 @@ Player.prototype.update = function(controls, map) {
     };
 /**
     if (controls.jump && !this.jump) {
-        this.velocity = jumpHight*-1; 
+        this.velocity = jumpHight*-1;
         this.jump = true;
         this.dir = this.dir + 2;
 
