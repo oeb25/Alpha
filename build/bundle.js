@@ -50,11 +50,11 @@
 
 	var _player2 = _interopRequireDefault(_player);
 
-	var _controls = __webpack_require__(2);
+	var _controls = __webpack_require__(3);
 
 	var _controls2 = _interopRequireDefault(_controls);
 
-	var _camera = __webpack_require__(3);
+	var _camera = __webpack_require__(4);
 
 	var _camera2 = _interopRequireDefault(_camera);
 
@@ -89,7 +89,7 @@
 	});
 	exports.default = Player;
 
-	var _spriteloader = __webpack_require__(4);
+	var _spriteloader = __webpack_require__(2);
 
 	var walkSpeed = 5;
 	var jumpHight = 16;
@@ -191,6 +191,23 @@
 /* 2 */
 /***/ function(module, exports) {
 
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Bitmap = Bitmap;
+	function Bitmap(src, width, height) {
+	    this.image = new Image();
+	    this.image.src = src;
+	    this.width = width;
+	    this.height = height;
+	};
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -212,7 +229,7 @@
 	};
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -222,7 +239,7 @@
 	});
 	exports.default = Camera;
 
-	var _spriteloader = __webpack_require__(4);
+	var _spriteloader = __webpack_require__(2);
 
 	function Camera(canvas) {
 	    this.ctx = canvas.getContext('2d');
@@ -254,23 +271,6 @@
 	};
 
 /***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.Bitmap = Bitmap;
-	function Bitmap(src, width, height) {
-	    this.image = new Image();
-	    this.image.src = src;
-	    this.width = width;
-	    this.height = height;
-	};
-
-/***/ },
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -281,7 +281,7 @@
 	});
 	exports.default = Map;
 
-	var _spriteloader = __webpack_require__(4);
+	var _spriteloader = __webpack_require__(2);
 
 	/**
 		Build the map **/
